@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float:right;
+}
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+table{
+    border-collapse: collapse;
+    text-align: center;
+    width:937px;
+}
+
+th,td{
+    border:1px solid #CADEFF;
+    padding: 10px;
+}
+th{
+    background-color: #e2f2ff;
+    border-top:3px solid #a7cbff;
+    height: 30px;
+}
+.checkbox {
+    width: 60px;
+}
+img{
+    width:100px;
+    height:100px;
+    vertical-align: middle;
+    /*float: left;*/
+}
+.count{
+    width: 90px;
+}
+.count input{
+    width: 50px;
+    height: 15px ;
+    text-align: center;
+    border: 1px solid #aaa;
+    padding: 4px  0;
+    z-index: 2;
+}
+.add ,.reduce {
+    border: 1px solid #e5e5e5;
+    background: #f0f0f0;
+    width: 17px;
+    height:23px;
+    /*text-align: center;*/
+    line-height: 23px;
+    /*margin-right: -1px;*/
+    z-index: 0;
+    padding-top: -1px;
+}
+ .add:hover, .reduce:hover {
+    color: #f50;
+    z-index: 3;
+    border-color: #f60;
+    cursor: pointer;
+}
+ .sum{
+     color: red;
+     font-weight: bold;
+ }
+ .delete:hover{
+     cursor: pointer;
+     color: red;
+     text-decoration: underline;
+ }
