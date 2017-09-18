@@ -8,13 +8,21 @@
 .fr{
     float:right;
 }
-.main{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+body{
+    width: 100%;
+    text-align:center
+}
+.add,.reduce,.selectAll{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.add{
+    text-align: center;
+    margin: 0 auto;
 }
 table{
+    margin: 50px auto 0 auto;
     border-collapse: collapse;
     text-align: center;
     width:937px;
@@ -23,35 +31,54 @@ table{
 th,td{
     border:1px solid #CADEFF;
     padding: 10px;
+    text-align: center;
+}
+td{
+    height: 80px;
 }
 th{
     background-color: #e2f2ff;
-    border-top:3px solid #a7cbff;
+    /*border-top:3px solid #f50;*/
     height: 30px;
+}
+.deleteTd{
+    width: 80px;
 }
 .checkbox {
     width: 60px;
 }
 img{
-    width:100px;
-    height:100px;
+    width:80px;
+    height:80px;
+    float: left;
     vertical-align: middle;
+    margin: 0 20px;
     /*float: left;*/
 }
-.count{
+.imgAlt{
+    line-height: 80px;
+    float: left;
+}
+.num{
     width: 90px;
 }
-.count input{
+.addRe{
+    border: 1px solid #ddd;
+    width: 86px;
+}
+.num input{
     width: 50px;
     height: 15px ;
     text-align: center;
-    border: 1px solid #aaa;
+    border: none;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
     padding: 4px  0;
     z-index: 2;
 }
 .add ,.reduce {
-    border: 1px solid #e5e5e5;
-    background: #f0f0f0;
+    border: none;
+    /*background: #f0f0f0;*/
     width: 17px;
     height:23px;
     /*text-align: center;*/
@@ -60,18 +87,55 @@ img{
     z-index: 0;
     padding-top: -1px;
 }
+.reduce{
+    opacity: 0.1;
+}
  .add:hover, .reduce:hover {
     color: #f50;
     z-index: 3;
     border-color: #f60;
     cursor: pointer;
 }
- .sum{
+ .sum ,.priceTotal ,#selectedTotal{
      color: red;
      font-weight: bold;
  }
+ .sum{
+     width: 150px;
+ }
+#selectedTotal{
+    margin: 0 4px;
+}
  .delete:hover{
      cursor: pointer;
      color: red;
      text-decoration: underline;
  }
+
+ .foot{
+     line-height: 48px;
+     width: 935px;
+     margin: 10px auto 50px auto;
+     color: #666;
+     height: 48px;
+     border: 1px solid #c8c8c8;
+     background-color: #eaeaea;
+     position: relative;
+ }
+.selectAll{
+       width: 60px;
+       padding-left:10px;
+    padding-right:20px;
+       line-height: 48px;
+}
+.count{
+    width: 100px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    background: #f50;
+    cursor: pointer;
+}
+.total{
+    margin:0 20px;
+}
