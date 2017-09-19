@@ -2,140 +2,182 @@
     margin: 0;
     padding: 0;
 }
-.fl{
+
+.fl {
     float: left;
 }
-.fr{
-    float:right;
+
+.fr {
+    float: right;
 }
-body{
+
+body {
     width: 100%;
-    text-align:center
+    text-align: center;
+    font-size: 14px;
 }
-.add,.reduce,.selectAll{
+
+a {
+    text-decoration: none;
+    text-decoration-color: #000;
+    color: #000;
+}
+
+.main {
+    display: inline-block;
+    box-shadow: 0 0 30px 0 #cfcfd0;
+    padding: 35px;
+    margin: 45px;
+}
+
+.add, .reduce, .selectAll, .count {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
 }
-.add{
+
+.add {
     text-align: center;
     margin: 0 auto;
 }
-table{
-    margin: 50px auto 0 auto;
+
+table {
+    margin: 0 auto;
     border-collapse: collapse;
     text-align: center;
-    width:937px;
+    width: 937px;
+    border-top: 1px solid #c0c0c0;
 }
 
-th,td{
-    border:1px solid #CADEFF;
+th, td {
+    border-bottom: 1px solid #c0c0c0;
     padding: 10px;
     text-align: center;
 }
-td{
+
+td {
     height: 80px;
 }
-th{
-    background-color: #e2f2ff;
+
+th {
+    background-color: #fff;
     /*border-top:3px solid #f50;*/
     height: 30px;
 }
-.deleteTd{
+
+.deleteTd {
     width: 80px;
 }
+
 .checkbox {
     width: 60px;
 }
-img{
-    width:80px;
-    height:80px;
+
+.checkAll {
+    margin-top: 1px;
+}
+
+img {
+    width: 80px;
+    height: 80px;
     float: left;
     vertical-align: middle;
     margin: 0 20px;
     /*float: left;*/
 }
-.imgAlt{
+
+.imgAlt {
     line-height: 80px;
     float: left;
 }
-.num{
+
+.num {
     width: 90px;
 }
-.addRe{
+
+.addRe {
     border: 1px solid #ddd;
     width: 86px;
 }
-.num input{
+
+.num input {
     width: 50px;
-    height: 15px ;
+    height: 15px;
     text-align: center;
     border: none;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
-    padding: 4px  0;
+    padding: 4px 0;
     z-index: 2;
 }
-.add ,.reduce {
+
+.add, .reduce {
     border: none;
-    /*background: #f0f0f0;*/
     width: 17px;
-    height:23px;
-    /*text-align: center;*/
+    height: 23px;
     line-height: 23px;
-    /*margin-right: -1px;*/
     z-index: 0;
     padding-top: -1px;
 }
-.reduce{
+
+.reduce {
     opacity: 0.1;
 }
- .add:hover, .reduce:hover {
-    color: #f50;
+
+.add:hover, .reduce:hover {
     z-index: 3;
-    border-color: #f60;
     cursor: pointer;
+    font-weight: bold;
 }
- .sum ,.priceTotal ,#selectedTotal{
-     color: red;
-     font-weight: bold;
- }
- .sum{
-     width: 150px;
- }
-#selectedTotal{
+
+.sum, .priceTotal, #selectedTotal {
+    font-weight: bold;
+}
+
+.sum {
+    width: 150px;
+}
+
+#selectedTotal {
     margin: 0 4px;
 }
- .delete:hover{
-     cursor: pointer;
-     color: red;
-     text-decoration: underline;
- }
 
- .foot{
-     line-height: 48px;
-     width: 935px;
-     margin: 10px auto 50px auto;
-     color: #666;
-     height: 48px;
-     border: 1px solid #c8c8c8;
-     background-color: #eaeaea;
-     position: relative;
- }
-.selectAll{
-       width: 60px;
-       padding-left:10px;
-    padding-right:20px;
-       line-height: 48px;
+.delete:hover, .addGood:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
-.count{
+
+.foot {
+    line-height: 50px;
+    width: 937px;
+    margin: 0 auto;
+    color: #000;
+    height: 50px;
+    background-color: #f8f8f8;
+    position: relative;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.selectAll {
+    width: 60px;
+    padding-left: 10px;
+    padding-right: 20px;
+    line-height: 50px;
+}
+
+#deleteAll {
+    margin-right: 20px;
+}
+
+.count {
     width: 100px;
     text-align: center;
     color: #ffffff;
     font-weight: bold;
-    background: #f50;
+    background: #000;
     cursor: pointer;
 }
-.total{
-    margin:0 20px;
+
+.total {
+    margin: 0 20px;
 }
