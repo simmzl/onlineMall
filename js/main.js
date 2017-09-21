@@ -62,9 +62,22 @@ for (var i = 0; i < check.length; i++) {
                 check[i].checked = this.checked;
             }
         }
+        //修复全选时取消某个之后再次选择，全选框不勾选的BUG
         if (this.checked === false) {
             for (i = 0; i < checkAll.length; i++) {
                 checkAll[i].checked = false;
+            }
+        }else{
+            var secNum = 0; 
+            for (i = 0; i < check.length; i++){
+                if(check[i].checked === true?true:false){
+                    secNum ++;
+                }
+            }
+            if(secNum===check.length-2){
+                for (i = 0; i < checkAll.length; i++) {
+                    checkAll[i].checked = true;
+                }
             }
         }
         getTotal();
