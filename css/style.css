@@ -106,6 +106,9 @@ img {
     height: 15px;
     text-align: center;
     border: none;
+    /*兼容safari*/
+    -webkit-appearance: none;
+    border-radius: 0;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
     padding: 4px 0;

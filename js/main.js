@@ -54,33 +54,35 @@ function getSum(tr) {
     }
 }
 
-for (var i = 0; i < check.length; i++) {
-    check[i].onclick = function () {
-        //判断是否为全选
-        if (this.className === "check checkAll") {
-            for (var i = 0; i < check.length; i++) {
-                check[i].checked = this.checked;
-            }
-        }
-        //修复全选时取消某个之后再次选择，全选框不勾选的BUG
-        if (this.checked === false) {
-            for (i = 0; i < checkAll.length; i++) {
-                checkAll[i].checked = false;
-            }
-        }else{
-            var secNum = 0; 
-            for (i = 0; i < check.length; i++){
-                if(check[i].checked === true?true:false){
-                    secNum ++;
+function addCheckClick() {
+    for (var i = 0; i < check.length; i++) {
+        check[i].onclick = function () {
+            //判断是否为全选
+            if (this.className === "check checkAll") {
+                for (var i = 0; i < check.length; i++) {
+                    check[i].checked = this.checked;
                 }
             }
-            if(secNum===check.length-2){
+            //修复全选时取消某个之后再次选择，全选框不勾选的BUG
+            if (this.checked === false) {
                 for (i = 0; i < checkAll.length; i++) {
-                    checkAll[i].checked = true;
+                    checkAll[i].checked = false;
+                }
+            } else {
+                var secNum = 0;
+                for (i = 0; i < check.length; i++) {
+                    if (check[i].checked === true) {
+                        secNum++;
+                    }
+                }
+                if (secNum === check.length - 2) {
+                    for (i = 0; i < checkAll.length; i++) {
+                        checkAll[i].checked = true;
+                    }
                 }
             }
+            getTotal();
         }
-        getTotal();
     }
 }
 
@@ -177,9 +179,11 @@ addGood.onclick = function () {
     }
     getTotal();
     addTdEvent();
+    addCheckClick();
     document.getElementsByTagName('body')[0].scrollHeight = 671;
 };
 addTdEvent();
+addCheckClick();
 checkAll[0].checked = true;
 checkAll[0].onclick();
 
