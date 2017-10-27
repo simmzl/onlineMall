@@ -6,8 +6,14 @@ var vm = new Vue({
         title: 'hello'
     },
     filters: {},
-    mounted: function mounted() {},
-    methods: {}
+    mounted: function mounted() {
+        this.cartView();
+    },
+    methods: {
+        cartView: function cartView() {
+            undefined.$http.get('');
+        }
+    }
 });
 
 //# sourceMappingURL=cart-compile.js.map

@@ -1,0 +1,36 @@
+{
+  "status":1,
+  "result":{
+    "totalMoney":109,
+    "list":[
+      {
+        "productId":"1",
+        "productName":"日式多功能颈枕 针织款",
+        "productPrice":69,
+        "productQuantity":1,
+        "productImage":"../images/1.png"
+      },
+      {
+        "productId":"2",
+        "productName":"便携含餐具高硼硅玻璃保鲜盒",
+        "productPrice":29,
+        "productQuantity":1,
+        "productImage":"../images/2.png"
+      },
+      {
+        "productId":"3",
+        "productName":"通体玻璃保存容器",
+        "productPrice":13,
+        "productQuantity":1,
+        "productImage":"../images/3.png"
+      },{
+        "productId":"4",
+        "productName":"日式色织水洗条纹抱枕",
+        "productPrice":59,
+        "productQuantity":1,
+        "productImage":"../images/4.png"
+      }
+    ]
+  },
+  "message":""
+}
