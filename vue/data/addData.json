@@ -1,0 +1,14 @@
+{
+  "status":2,
+  "result":{
+    "list":[
+      {
+        "productId":"5",
+        "productName":"埃及进口长绒棉毛巾",
+        "productPrice":159,
+        "productQuantity":1,
+        "productImage":"../images/5.png"
+      }
+    ]
+  }
+}

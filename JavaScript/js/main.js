@@ -1,4 +1,4 @@
-//支持低版本IE的className
+
 if (!document.getElementsByClassName) {
     document.getElementsByClassName = function (cls) {
         var ret = [];

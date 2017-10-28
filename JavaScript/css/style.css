@@ -19,13 +19,15 @@ body {
 
 a {
     text-decoration: none;
-    text-decoration-color: #000;
+    -webkit-text-decoration-color: #000;
+            text-decoration-color: #000;
     color: #000;
 }
 
 .main {
     display: inline-block;
-    box-shadow: 0 0 30px 0 #cfcfd0;
+    -webkit-box-shadow: 0 0 30px 0 #cfcfd0;
+            box-shadow: 0 0 30px 0 #cfcfd0;
     padding: 35px;
     margin-top: 45px;
     margin-bottom: 45px;
@@ -34,7 +36,8 @@ a {
 .add, .reduce, .selectAll, .count {
     -webkit-user-select: none;
     -moz-user-select: none;
-    user-select: none;
+    -ms-user-select: none;
+        user-select: none;
 }
 
 .add {
@@ -62,7 +65,6 @@ td {
 
 th {
     background-color: #fff;
-    /*border-top:3px solid #f50;*/
     height: 30px;
 }
 

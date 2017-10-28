@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cart</title>
+    <title>vue-cart</title>
     <link rel="stylesheet" href="../JavaScript/css/style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
         <thead>
         <tr>
             <th>
-                <input type="checkbox" class="check checkAll">
+                <input type="checkbox" class="check checkAll" @click="checkALL()"  v-model="checkedAll">
                 &nbsp;全选
             </th>
             <th>
@@ -33,12 +33,12 @@
         </thead>
         <tbody>
         <tr v-for = 'item in productList' @click="trClick($event,item)">
-            <td class="checkbox"><input type="checkbox" class="check"></td>
+            <td class="checkbox"><input type="checkbox" class="check" v-bind:checked="item.checked"></td>
             <td><img v-bind:src="item.productImage" alt=""><span class="imgAlt">{{item.productName}}</span></td>
             <td>{{item.productPrice | formatMoney}}</td>
             <td class="num">
                 <div class="addRe">
-                    <span class="reduce fl">-</span><input type="text" v-model="item.productQuantity" class="fl"><span class="add fl">+</span>
+                    <span class="reduce fl">-</span><input type="text" v-model="item.productQuantity" class="fl" v-on:keyup="inputQuantity($event,item)"><span class="add fl">+</span>
                     <div style="clear:both"></div>
                 </div>
             </td>
@@ -48,18 +48,17 @@
         </tbody>
     </table>
     <div class="foot" id="foot">
-        <label class="fl selectAll"><input type="checkbox" class="check checkAll"/>&nbsp;全选</label>
-        <span class="fl delete" id="deleteAll">批量删除</span>
-        <a class="fl addGood" id="addGood" href="#footer">添加商品（测试用）</a>
+        <label class="fl selectAll"><input type="checkbox" class="check checkAll" @click='checkALL()'  v-model="checkedAll">&nbsp;全选</label>
+        <span class="fl delete" id="deleteAll" @click="deleteAll()">批量删除</span>
+        <a class="fl addGood" id="addGood" @click="addProduct()">添加商品</a>
         <div class="fr count">结算</div>
         <div class="fr total">合计：<span id="priceTotal" class="priceTotal">{{totalMoney | formatMoney}}</span></div>
         <div class="fr selected" id="selected">已选商品<span id="selectedTotal">{{totalQuantity}}</span>件</div>
     </div>
 
 </div>
-<div style='opacity: 0' id='footer'></div>
 <script src="js/lib/vue.min.js"></script>
 <script src="js/lib/vue-resource.js"></script>
-<script src="js/cart.js"></script>
+<script src="../dist/vue/js/cart.js"></script>
 </body>
 </html>
